@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 
 const fetchProfileDetails = async (profileId) => {
-  const response = await fetch('https://api.stackexchange.com/2.3/users/2994917?order=desc&sort=reputation&site=stackoverflow');
+  const response = await fetch(`https://api.stackexchange.com/2.3/users/${profileId}?order=desc&sort=reputation&site=stackoverflow`);
   return response.json();
 }
 
