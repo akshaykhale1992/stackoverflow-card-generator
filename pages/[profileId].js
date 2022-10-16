@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import React from 'react'
+import { useRouter } from 'next/router'
 
-const fetchProfileDetails = async () => {
-  const response = await fetch('https://api.stackexchange.com/2.3/users/2541634?order=desc&sort=reputation&site=stackoverflow');
+
+const fetchProfileDetails = async (profileId) => {
+  const response = await fetch('https://api.stackexchange.com/2.3/users/2994917?order=desc&sort=reputation&site=stackoverflow');
   return response.json();
 }
 
-export async function getServerSideProps() {
-  const response = await fetchProfileDetails();
+export async function getServerSideProps(context) {
+  const { profileId } = context.query
+  const response = await fetchProfileDetails(profileId);
   const profileDetails = response.items[0];
   return {
     props: {
@@ -16,7 +19,7 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({ profileDetails }) {
+export default function ProfileDetails({ profileDetails }) {
   const [profileId, setProfileId] = React.useState(false);
   return (
     <div>
