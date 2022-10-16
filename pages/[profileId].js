@@ -33,9 +33,14 @@ export default function ProfileDetails({ profileDetails }) {
       <main className="mx-auto flex flex-col items-center justify-center my-10">
         <h1 className="my-10 font-semibold text-4xl">Here is your stackoverflow card: {profileDetails.display_name}</h1>
         <section className="bg-gray-200 p-5 w-60 rounded-md text-center" >
-          <img className="w-7" src="./stack-overflow.png" alt="StackOverflow" />
+        <a className="text-xs mt-1 text-gray-600 underline" target="_blank" rel="noreferrer" href={profileDetails.link}>
+            <img className="w-7" src="./stack-overflow.png" alt="StackOverflow" />
+          </a>
           <img src={profileDetails.profile_image} alt="User Profile" className="w-28 mx-auto rounded-full" />
           <div className="mt-4 font-bold text-xl">{profileDetails.display_name}</div>
+          <a className="text-xs mt-1 text-gray-600 underline" target="_blank" rel="noreferrer" href={profileDetails.website_url}>
+            {profileDetails.website_url}
+          </a>
           <div className="w-28 h-[1px] mt-2 bg-gray-300 mx-auto"></div>
           <div>
             <div className="text-3xl mt-2 text-yellow-600">{profileDetails.reputation}</div>
