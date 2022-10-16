@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Profile from '../components/Profile'
 
 export default function About() {
   return (
@@ -11,6 +12,7 @@ export default function About() {
       </Head>
       <main className="mx-auto flex flex-col items-center justify-center my-10">
         <h1 className="my-10 font-semibold text-4xl">It&apos;s a simple Card Generator</h1>
+        <Profile />
       </main>
     </div>
   )
