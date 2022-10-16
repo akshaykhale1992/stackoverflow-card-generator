@@ -4,6 +4,8 @@
 
 As the name suggests, it's a simple Stackoverflow card generator that uses Stackoverflow API to fetch profile details and present those details in form of a card.
 
+See it in action here: [https://stackoverflow-card-generator.vercel.app/](https://stackoverflow-card-generator.vercel.app/)
+
 Details shown on the Card includes
 - Profile Display Name
 - Profile Picture
@@ -36,4 +38,8 @@ Details shown on the Card includes
 
 ## Contributing
 
-1. Just Submit a PR and we will take it from there.
+There are following options to contribute to this project.
+- Add a New feature and raise a Pull Request.
+- Pick up any issue from [issues List](https://github.com/akshaykhale1992/stackoverflow-card-generator/issues)
+- Raise a feature request or issue in the [Github issues](https://github.com/akshaykhale1992/stackoverflow-card-generator/issues).
+- Feel free to [fork](https://github.com/akshaykhale1992/stackoverflow-card-generator/fork) and create a new project with new features.
