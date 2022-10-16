@@ -31,7 +31,7 @@ export default function ProfileDetails({ profileDetails }) {
       </Head>
 
       <main className="mx-auto flex flex-col items-center justify-center my-10">
-        <h1 className="my-10 font-semibold text-4xl">Stackoverflow Card generator</h1>
+        <h1 className="my-10 font-semibold text-4xl">Here is your stackoverflow card: {profileDetails.display_name}</h1>
         <section className="bg-gray-200 p-5 w-60 rounded-md text-center" >
           <img className="w-7" src="./stack-overflow.png" alt="StackOverflow" />
           <img src={profileDetails.profile_image} alt="User Profile" className="w-28 mx-auto rounded-full" />
@@ -57,16 +57,6 @@ export default function ProfileDetails({ profileDetails }) {
                 <div className="w-3 h-3 mx-auto rounded-full bg-yellow-700 mb-1" />
                 <div>{profileDetails.badge_counts.bronze}</div>
               </div>
-            </div>
-          </div>
-        </section>
-        <section className="my-10">
-          <div>
-            <h1 className="mb-3 font-semibold text-xl text-center">Generate your&apos;s here:</h1>
-            <label className="text-sm mt-1 text-gray-600" htmlFor="stackoverflow_id">StackOverflow ID: </label>
-            <input onChange={(e) => setProfileId(e.target.value)} value={profileId ? profileId : ''} id="stackoverflow_id" className="border-2 rounded-md px-2" type="text" />
-            <div className="text-center my-3">
-              <input onClick={() => window.location.href = `/${profileId}`} className="py-2 px-4 rounded-md bg-blue-500 text-white font-extrabold border-2 cursor-pointer" value="Generate" type="button" />
             </div>
           </div>
         </section>
