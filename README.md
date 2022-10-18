@@ -27,6 +27,8 @@ Details shown on the Card includes
 
 2. Install Dependencies using `yarn`
 
+3. Run `yarn dev` to start the development server.
+
 3. Visit `http://localhost:3000/` to see it in Action.
 
 ## Todo:
