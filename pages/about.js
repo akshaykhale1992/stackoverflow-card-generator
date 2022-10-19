@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function About() {
   return (
@@ -6,12 +6,17 @@ export default function About() {
       <Head>
         <title>Stackoverflow Card Generator | About</title>
         <meta name="description" content="Stackoverflow Card Generator" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mx-auto flex flex-col items-center justify-center my-10">
-        <h1 className="my-10 font-semibold text-4xl">It&apos;s a simple Card Generator</h1>
+        <h1 className="my-10 font-semibold text-4xl">
+          It&apos;s a simple Card Generator
+        </h1>
       </main>
     </div>
-  )
+  );
 }
