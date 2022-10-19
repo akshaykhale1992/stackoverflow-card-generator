@@ -1,6 +1,7 @@
-import Head from "next/head";
-import React from "react";
-import Profile from "../components/Profile";
+import React from 'react';
+import CustomHead from '../components/CustomHead/CustomHead';
+import Layout from '../components/Layout/Layout';
+import Profile from '../components/Profile';
 
 const fetchProfileDetails = async (profileId) => {
   const response = await fetch(
@@ -23,23 +24,13 @@ export async function getServerSideProps(context) {
 export default function ProfileDetails({ profileDetails }) {
   const [profileId, setProfileId] = React.useState(false);
   return (
-    <div>
-      <Head>
-        <title>Stackoverflow Card Generator</title>
-        <meta name="description" content="Stackoverflow Card Generator" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        ></meta>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="mx-auto flex flex-col items-center justify-center my-10">
-        <h1 className="my-10 font-semibold text-4xl">
-          Here is your stackoverflow card: {profileDetails.display_name}
-        </h1>
+    <>
+      <CustomHead />
+      <Layout
+        title={`Here is your stackoverflow card: ${profileDetails.display_name}`}
+      >
         <Profile profileDetails={profileDetails} />
-      </main>
-    </div>
+      </Layout>
+    </>
   );
 }
