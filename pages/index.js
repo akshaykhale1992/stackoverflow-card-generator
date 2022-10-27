@@ -4,7 +4,13 @@ import Profile from "../components/Profile";
 
 const fetchProfileDetails = async () => {
   const response = await fetch(
-    "https://api.stackexchange.com/2.3/users/2541634?order=desc&sort=reputation&site=stackoverflow"
+    "https://api.stackexchange.com/2.3/users/2541634?order=desc&sort=reputation&site=stackoverflow",
+    {
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    }
   );
   return response.json();
 };
