@@ -34,7 +34,7 @@ const Profile = ({ profileDetails }) => {
           rel="noreferrer"
           href={profileDetails.link}
         >
-          <img className="w-7" src="./stack-overflow.png" alt="StackOverflow" />
+          <img className="w-7" src="./stack-overflow.png" alt="StackOverflow" crossOrigin="anonymous" />
         </a>
         <Share onDownloadPng={onDownloadClick} />
       </div>
